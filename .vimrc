@@ -60,6 +60,7 @@ set encoding=utf-8
 
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_python_binry_path = 'python'
 
 "python with virtualenv support
 py << EOF
@@ -88,7 +89,7 @@ call togglebg#map("<F5>")
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 set nu
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " syntastic
 let g:syntastic_auto_loc_list=1     
@@ -128,3 +129,8 @@ let g:NERDCommentEmptyLines = 1
 "
 " " Enable trimming of trailing whitespace when uncommenting
 " let g:NERDTrimTrailingWhitespace = 1
+"
+autocmd VimEnter * nested :TagbarOpen
+au VimEnter *  NERDTree
+
+set mouse=a
