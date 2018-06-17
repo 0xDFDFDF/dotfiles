@@ -11,7 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 " " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
@@ -23,7 +23,9 @@ Plugin 'tpope/vim-fugitive'
 " Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'bling/vim-airline'
-Plugin 'majutsushi/tagbar'
+" Plugin 'majutsushi/tagbar'
+Plugin 'vim-latex/vim-latex'
+Plugin 'neovimhaskell/haskell-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,9 +60,9 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 set encoding=utf-8
 
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_python_binry_path = 'python'
+" let g:ycm_autoclose_preview_window_after_completion=1
+" map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" let g:ycm_python_binry_path = 'python'
 
 "python with virtualenv support
 py << EOF
@@ -130,7 +132,7 @@ let g:NERDCommentEmptyLines = 1
 " " Enable trimming of trailing whitespace when uncommenting
 " let g:NERDTrimTrailingWhitespace = 1
 "
-autocmd VimEnter * nested :TagbarOpen
+" autocmd VimEnter * nested :TagbarOpen
 au VimEnter *  NERDTree
 
 set mouse=a
